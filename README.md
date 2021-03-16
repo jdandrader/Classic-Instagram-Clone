@@ -1,21 +1,27 @@
-# Insagram clone
+# 🤳 Insagram clone 📸
 
-## Set Up
-````
+## ⚒️ Set Up
+
+```
 npm i
 ```
 
-### Run project
+### 🏃‍♀️ Run project
+
 ```
 npm run dev
 ```
 
-### Run test
+It's works on [localhost:3500](http://localhost:3500)
+
+
+### ⚗️ Run test
+
 ```
 npm run test
 ```
 
-#### Dependencies
+#### 📦 Dependencies
 - Express
 - Jsonwebtoken
 - Handlebars

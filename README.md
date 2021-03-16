@@ -25,6 +25,14 @@ npm run test
 - Express
 - Jsonwebtoken
 - Handlebars
+- hbs
 - Jest
+- Mocha
 - Supertest
 - dotenv
+- bcryptjs
+- connect-flash
+- passport
+- method-override
+- mongoose
+- cors

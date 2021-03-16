@@ -1,8 +1,9 @@
 const express = require("express");
 const http = require("http");
 const cors = require("cors");
-const hbs = require("hbs");
 const connection = require("../database/database");
+const hbs = require("hbs");
+const path = require('path')
 
 class Server {
 	constructor() {
@@ -16,17 +17,18 @@ class Server {
 		this.app.use(cors());
 		this.app.use(express.json());
 		this.app.use(express.urlencoded({ extended: false }));
+		this.app.use(express.static(path.join(__dirname, 'public')));
 		this.app.set("view engine", "hbs");
-		hbs.registerPartials(__dirname + "/components/", function (err) {
-			console.log(err);
-		});
+		this.app.set("views", path.join(__dirname + "views"));
+		hbs.registerPartials(__dirname + "/views/partials", function (err) {});
 	}
 
 	routes() {
 		// api
-		this.app.use("/api/v1/auth", require('../routes/routes'));
+
 
 		// application
+		this.app.use("/", require("../routes/routes"));
 	}
 
 	start() {

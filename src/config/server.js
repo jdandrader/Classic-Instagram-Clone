@@ -2,7 +2,7 @@ const express = require("express");
 const http = require("http");
 const cors = require("cors");
 const hbs = require("hbs");
-const connection = require("./dbConfig");
+const connection = require("../database/database");
 
 class Server {
 	constructor() {
@@ -15,6 +15,7 @@ class Server {
 	middlewares() {
 		this.app.use(cors());
 		this.app.use(express.json());
+		this.app.use(express.urlencoded({ extended: false }));
 		this.app.set("view engine", "hbs");
 		hbs.registerPartials(__dirname + "/components/", function (err) {
 			console.log(err);
@@ -23,8 +24,7 @@ class Server {
 
 	routes() {
 		// api
-		this.app.use("/api/v1/auth", require("../routes/authRoutes"));
-
+		this.app.use("/api/v1/auth", require('../routes/routes'));
 
 		// application
 	}

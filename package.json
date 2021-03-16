@@ -1,11 +1,11 @@
 {
-  "name": "Clasic-Instagram-Clone",
+  "name": "clasic-instagram-clone",
   "version": "1.0.0",
   "description": "A clasic Instagram clone",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest",
-    "start": "node index.js",
+    "start": "node src/index.js",
     "dev": "nodemon index.js"
   },
   "repository": {

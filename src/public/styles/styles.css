@@ -1,5 +1,80 @@
 /*
 ==================
+-> Global bars <-
+==================
+*/
+:root {
+	--var-height: 3em;
+}
+
+
+/*
+==================
+-> Components <-
+==================
+*/
+
+/* -> Header-navbar <- */
+.header__container nav {
+	display: flex;
+	align-items: center;
+	border: 1px solid aqua;
+	padding: 0 2em;
+	height: var(--var-height);
+}
+
+
+.header__container nav ul {
+	display: flex;
+	list-style: none;
+	height: 100%;
+}
+
+.header__container nav ul li {
+	height: 100%;
+	margin: 0 1em;
+}
+
+.header__container nav ul li a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	height: 100%;
+}
+
+.img__headerUser {
+	height: 80%;
+	border-radius: 50%;
+	margin: auto 0;
+	cursor: pointer;
+}
+
+
+/* -> Status <- */
+.div__status {
+	margin-top: 2em;
+	background-color: aqua;
+	height: 8em;
+}
+
+
+
+/* -> Profile card ( render in home ) <- */
+.div__profileCard {
+	position: sticky;
+	top: 1em;
+	width: 25%;
+}
+
+@media screen and (max-width: 990px) {
+	.div__profileCard {
+		display: none;
+	}
+}
+
+
+/*
+==================
 -> Home <-
 ==================
 */
@@ -16,14 +91,20 @@
 }
 
 .section__principal {
-
+	display: flex;
+	justify-content: center;
+	height: calc(100% - var(--var-height));
 }
 
-/*
-==================
--> Components <-
-==================
-*/
+.div__publications {
+	width: 45%;
+}
+
+@media screen and (max-width: 990px) {
+	.div__publications {
+		width: 90%;
+	}
+}
 
 
 /*

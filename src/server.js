@@ -2,6 +2,7 @@ const express = require("express");
 const hbs = require("express-handlebars");
 const morgan = require("morgan");
 const path = require("path");
+const favicon = require("express-favicon");
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.engine(
 app.set("view engine", ".hbs");
 
 app.use(morgan("dev"));
+app.use(favicon(__dirname + "/public/favicon.ico"));
 
 app.use(require("./routes/routes"));
 

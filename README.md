@@ -8,7 +8,7 @@ npm i
 
 ⚠️🙅‍♀️ Don't merege any branch without first this having been approved! 🙅‍♀️⚠️
 
-⚠️ Use boxicons for any [icon](https://boxicons.com) as a **FONT** not web component  ⚠️
+⚠️ Use boxicons for any [icon](https://boxicons.com) as a **FONT**, -> not web component <- ⚠️
 
 ### 🏃‍♀️ Run project
 

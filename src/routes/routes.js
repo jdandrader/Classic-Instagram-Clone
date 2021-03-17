@@ -5,4 +5,16 @@ router.get("/", (req, res) => {
 	res.render("index");
 });
 
+router.get("/login", (req, res) => {
+	res.render("layouts/login");
+});
+
+router.get("/register", (req, res) => {
+	res.render("layouts/register");
+});
+
+router.get("/profile", (req, res) => {
+	res.render("layouts/profile");
+});
+
 module.exports = router;

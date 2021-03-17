@@ -22,7 +22,8 @@ app.set("view engine", ".hbs");
 app.use(morgan("dev"));
 app.use(favicon(__dirname + "/public/favicon.ico"));
 
-app.use(require("./routes/routes"));
+app.use('/', require("./routes/user/user.routes"));
+app.use('/auth',require("./routes/auth/auth.routes"));
 
 app.use(express.static(path.join(__dirname, "public")));
 

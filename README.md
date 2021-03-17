@@ -6,9 +6,9 @@
 npm i
 ```
 
-⚠️ Use boxicons for any [icon](https://boxicons.com) ⚠️
-
 ⚠️🙅‍♀️ Don't merege any branch without first this having been approved! 🙅‍♀️⚠️
+
+⚠️ Use boxicons for any [icon](https://boxicons.com) as a **FONT** not web component  ⚠️
 
 ### 🏃‍♀️ Run project
 

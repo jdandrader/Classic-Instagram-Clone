@@ -6,6 +6,10 @@
 npm i
 ```
 
+⚠️ Use boxicons for any [icon](https://boxicons.com) ⚠️
+
+⚠️🙅‍♀️ Don't merege any branch without first this having been approved! 🙅‍♀️⚠️
+
 ### 🏃‍♀️ Run project
 
 ```

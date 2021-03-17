@@ -24,15 +24,14 @@ npm run test
 #### 📦 Dependencies
 - Express
 - Jsonwebtoken
-- Handlebars
-- hbs
+- Express-handlebars
 - Jest
 - Mocha
 - Supertest
-- dotenv
-- bcryptjs
-- connect-flash
-- passport
-- method-override
-- mongoose
-- cors
+- Dotenv
+- Bcryptjs
+- Connect-flash
+- Passport
+- Method-override
+- Mongoose
+- Cors

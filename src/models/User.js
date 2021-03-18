@@ -23,7 +23,7 @@ const UserChema = new Schema({
 });
 
 UserChema.methods.encryptPassword = async function (password) {
-	const salt = await bcrypt.getSalt(15);
+	const salt = await bcrypt.genSalt(15);
 	return await bcrypt.hash(password, salt);
 };
 

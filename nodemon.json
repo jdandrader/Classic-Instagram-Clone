@@ -1,3 +1,4 @@
 {
-	"ext": "js,json,hbs"
+	"watch": ["server.js", "views/"],
+	"ext": "js,json,hbs,css"
 }

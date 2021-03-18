@@ -7,6 +7,7 @@ const favicon = require("express-favicon");
 const app = express();
 
 app.set("port", process.env.PORT);
+app.use(express.urlencoded({ extended: false }));
 app.set("views", path.join(__dirname, "views"));
 app.engine(
 	".hbs",

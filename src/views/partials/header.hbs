@@ -9,13 +9,14 @@
 			<li><a href="/"><i class='bx bx-paper-plane'></i></a></li>
 			<li><a href="/"><i class='bx bx-compass'></i></a></li>
 			<li><a href="/"><i class='bx bx-heart'></i></a></li>
-			{{#if user.authenticated}}
+			{{#if user}}
 				<li>
 					<img class="img__headerUser"
 								src="https://instagram.fbog2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/120036300_168551024814795_4693258434005320632_n.jpg?tp=1&_nc_ht=instagram.fbog2-1.fna.fbcdn.net&_nc_ohc=xX2rEi_9O8UAX-z_ric&oh=cd0807fc0cad5d22611428f4c90a90ab&oe=607D138A"
 								alt="User"
 					/>
 				</li>
+				<li><a href="/auth/log-out">LogOut</a></li>
 			{{/if}}
 		</ul>
 	</nav>

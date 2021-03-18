@@ -2,7 +2,10 @@
 <section class="section__principal">
 	<div class="div__publications">
 		{{> status}}
+		{{user}}
 		{{> publication}}
 	</div>
-	{{> profileCard}}
+	{{#if user}}
+		{{> profileCard}}
+	{{/if}}
 </section>

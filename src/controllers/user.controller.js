@@ -1,10 +1,7 @@
 const homeController = (req, res) => {
 	res.render("index", {
 		description: "Simple clone of Instagram only for practice propousessss",
-		title: "Instagram Clone",
-		user: {
-			authenticated: true,
-		},
+		title: "Instagram Clone"
 	});
 }
 

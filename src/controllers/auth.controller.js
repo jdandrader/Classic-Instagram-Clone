@@ -7,8 +7,7 @@
 / 　 づ
 */
 
-const jwt = require("jsonwebtoken");
-const { createToken } = require("../helpers/auth");
+const passport = require("passport");
 const User = require("../models/User");
 
 const renderAuthRegister = (req, res) => {
@@ -23,38 +22,14 @@ const renderAuthLogin = (req, res) => {
 	});
 };
 
-const authLogin = async (req, res) => {
-	try {
-		const {  userName,  password } = req.body;
-		const user = await User.findOne({userName})
+const authLogin = passport.authenticate("local", {
+	failureRedirect: "layouts/login",
+	successRedirect: "/",
+});
 
-		if(!user){
-			return res.redirect("/auth/register");
-		}
-
-
-		const validatePassword = await user.comparePasswords(password)
-		console.log(validatePassword);
-
-		if (!validatePassword) {
-			return res.redirect("/auth/login");
-		}
-
-		let payload = {
-			id: user._id,
-			name: user.realName,
-			userName: user.userName
-		};
-
-		let token = await createToken(payload)
-
-		console.log(token);
-		localStorage.setItem('tokenInstagram', token)
-		res.redirect("/");
-
-	} catch (error) {
-		console.log(error);
-	}
+const authLogOut = (req, res) => {
+	req.logout();
+	res.redirect("/");
 };
 
 const authRegister = async (req, res) => {
@@ -64,7 +39,6 @@ const authRegister = async (req, res) => {
 		user.password = await user.encryptPassword(password);
 		await user.save();
 
-		const token = await createToken(user.id);
 		res.redirect("/");
 	} catch (error) {
 		console.error(error);
@@ -73,6 +47,7 @@ const authRegister = async (req, res) => {
 
 module.exports = {
 	authLogin,
+	authLogOut,
 	authRegister,
 	renderAuthRegister,
 	renderAuthLogin,

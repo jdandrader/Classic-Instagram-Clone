@@ -1,10 +1,17 @@
-const { authLogin, authRegister, renderAuthLogin, renderAuthRegister } = require("./auth.controller");
+const {
+	authLogin,
+	authLogOut,
+	authRegister,
+	renderAuthLogin,
+	renderAuthRegister,
+} = require("./auth.controller");
 const { homeController, profileController } = require("./user.controller");
 
 module.exports = {
 	authLogin,
-	renderAuthLogin,
 	authRegister,
+	authLogOut,
+	renderAuthLogin,
 	renderAuthRegister,
 	homeController,
 	profileController,

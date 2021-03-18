@@ -28,6 +28,8 @@ npm run test
 #### 📦 Dependencies
 - Express
 - Express-handlebars
+- Express-session
+- Cookie-parser
 - Jsonwebtoken
 - Dotenv
 - Bcryptjs
